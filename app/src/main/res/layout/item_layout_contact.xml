@@ -15,14 +15,18 @@
         android:orientation="vertical"
         android:padding="12dp">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_contact"
+        <TextView
+            android:id="@+id/txt_contact"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
+            tools:text="R"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
             android:layout_marginBottom="4dp"
-            android:background="?colorPrimary"
+            android:background="@drawable/text_bg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -40,8 +44,8 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/txt_contact_number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/img_contact"
-            app:layout_constraintTop_toTopOf="@+id/img_contact"
+            app:layout_constraintStart_toEndOf="@+id/txt_contact"
+            app:layout_constraintTop_toTopOf="@+id/txt_contact"
             tools:text="Rahul Raghuwanshi" />
 
         <TextView
@@ -51,9 +55,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/img_contact"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_contact"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/img_contact"
+            app:layout_constraintStart_toEndOf="@+id/txt_contact"
             app:layout_constraintTop_toBottomOf="@+id/txt_contact_name"
             tools:text="Description" />
 

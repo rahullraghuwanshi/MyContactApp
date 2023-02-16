@@ -7,6 +7,7 @@ import com.rahulraghuwanshi.mycontactapp.data.contact.Contact
 import com.rahulraghuwanshi.mycontactapp.databinding.ItemLayoutContactBinding
 
 class ContactAdapter(
+    private val itemClickListener: ItemClickListener,
     private val list: List<Contact>
 ) : RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() {
 
@@ -31,8 +32,15 @@ class ContactAdapter(
             txtContactName.text = contact.full_name
             txtContactNumber.text = contact.number
 
-            constraint.setOnClickListener {  }
+            txtContact.text = contact.full_name[0].toString()
+
+            constraint.setOnClickListener {
+                itemClickListener.onItemClick(contact)
+            }
         }
     }
+}
 
+interface ItemClickListener{
+    fun onItemClick(contact: Contact)
 }
